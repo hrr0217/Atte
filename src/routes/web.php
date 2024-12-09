@@ -15,6 +15,10 @@ use App\Http\Controllers\AtteController;
 */
 
 
-Route::get('/', [AtteController::class, 'index']);
+// Route::get('/', [AtteController::class, 'index']);
 
-Route::get('/login', [AtteController::class, 'login']);
+// Route::get('/login', [AtteController::class, 'login']);
+
+Route::middleware('auth')->group(function () {
+    Route::get('/', [AtteController::class, 'index']);
+});

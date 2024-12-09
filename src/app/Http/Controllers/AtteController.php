@@ -10,7 +10,7 @@ class AtteController extends Controller
         return view('index');
     }
 
-    public function login(){
-        return view('login');
-    }
+//     // public function login(){
+//         return view('login');
+//     }
 }
